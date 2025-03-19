@@ -11,6 +11,9 @@
 		809ED16D2D8AEC6700DE9E18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ED16C2D8AEC6700DE9E18 /* ContentView.swift */; };
 		809ED16F2D8AEC6800DE9E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809ED16E2D8AEC6800DE9E18 /* Assets.xcassets */; };
 		809ED1722D8AEC6800DE9E18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809ED1712D8AEC6800DE9E18 /* Preview Assets.xcassets */; };
+		809ED1792D8AED6800DE9E18 /* PopoverContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ED1782D8AED6800DE9E18 /* PopoverContentView.swift */; };
+		809ED17B2D8AF0C700DE9E18 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ED17A2D8AF0C700DE9E18 /* Fruit.swift */; };
+		809ED17D2D8AF15700DE9E18 /* FruitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809ED17C2D8AF15700DE9E18 /* FruitListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		809ED16C2D8AEC6700DE9E18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		809ED16E2D8AEC6800DE9E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		809ED1712D8AEC6800DE9E18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		809ED1782D8AED6800DE9E18 /* PopoverContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverContentView.swift; sourceTree = "<group>"; };
+		809ED17A2D8AF0C700DE9E18 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		809ED17C2D8AF15700DE9E18 /* FruitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 				809ED16C2D8AEC6700DE9E18 /* ContentView.swift */,
 				809ED16E2D8AEC6800DE9E18 /* Assets.xcassets */,
 				809ED1702D8AEC6800DE9E18 /* Preview Content */,
+				809ED1782D8AED6800DE9E18 /* PopoverContentView.swift */,
+				809ED17A2D8AF0C700DE9E18 /* Fruit.swift */,
+				809ED17C2D8AF15700DE9E18 /* FruitListView.swift */,
 			);
 			path = PopOver;
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809ED17B2D8AF0C700DE9E18 /* Fruit.swift in Sources */,
 				809ED16D2D8AEC6700DE9E18 /* ContentView.swift in Sources */,
 				809ED16B2D8AEC6700DE9E18 /* PopOverApp.swift in Sources */,
+				809ED17D2D8AF15700DE9E18 /* FruitListView.swift in Sources */,
+				809ED1792D8AED6800DE9E18 /* PopoverContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
