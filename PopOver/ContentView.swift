@@ -9,27 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selectedFruit: Fruit? = nil
-    @State private var showPopover = true  // Show popover by default
-    
+    @State private var columnVisibility: NavigationSplitViewVisibility = .automatic
+
     var body: some View {
-        HStack {
-            // Popover Menu (Shown by Default)
+        NavigationSplitView(columnVisibility: $columnVisibility) {
+            // Sidebar (Collapsible)
             FruitListView(selectedFruit: $selectedFruit)
-                .popover(isPresented: $showPopover, attachmentAnchor: .rect(.bounds), arrowEdge: .leading) {
-                    FruitListView(selectedFruit: $selectedFruit)
-                }
-                .frame(width: 250)
-            
-            // Main Content Area
+                .navigationTitle("Fruits")
+        } detail: {
+            // Main Content View
             VStack {
                 if let fruit = selectedFruit {
                     Text(fruit.name)
                         .font(.largeTitle)
                         .padding()
-                    
+
                     Text(fruit.description)
                         .font(.title2)
                         .padding()
+
+                    Button("Back to Menu") {
+                        columnVisibility = .all // Show sidebar again
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .padding()
                 } else {
                     Text("Select a fruit from the menu")
                         .font(.title)
@@ -38,6 +41,10 @@ struct ContentView: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .navigationTitle(selectedFruit?.name ?? "Fruit Details")
+        }
+        .onChange(of: selectedFruit) { _, _ in
+            columnVisibility = .detailOnly // Collapse sidebar when fruit is selected
         }
     }
 }

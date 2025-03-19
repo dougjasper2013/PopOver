@@ -38,6 +38,15 @@ struct FruitListView: View {
 }
 
 
-// #Preview {
-//    FruitListView()
-// }
+struct FruitListView_Previews: PreviewProvider {
+    static var previews: some View {
+        StatePreview()
+    }
+}
+ 
+struct StatePreview: View {
+    @State private var selectedFruit: Fruit? = Fruit(name: "Apple", description: "A sweet red fruit.")
+    var body: some View {
+        FruitListView(selectedFruit: $selectedFruit) // Pass the binding of selectedFruit
+    }
+}
